@@ -1,0 +1,36 @@
+body {
+  background-color: #cee0d8;
+}
+
+.collapse {
+  padding: 10px;
+  overflow: hidden;
+  height: 38px;
+  
+  transition: height 2s;
+}
+
+.collapse.active {
+  height: 302px;
+}
+
+.button-collapse {
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 10px;
+  
+  color: #ffffff;
+  
+  background-color: #915b96;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.block-collapse {
+  box-sizing: border-box;
+  width: 300px;
+  padding: 10px;
+  
+  background-color: #ffffff;
+  border: 1px solid #a7a7a7;
+}
