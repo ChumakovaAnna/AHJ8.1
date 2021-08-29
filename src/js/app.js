@@ -1,10 +1,6 @@
-function collapse() {
-  const button = document.querySelector('.button-collapse');
-  const eleCollapse = document.querySelector('.collapse');
+import API from "./API";
+import Widget from "./Widget";
 
-  button.addEventListener('click', () => {
-    eleCollapse.classList.toggle('active');
-  });
-}
-
-collapse();
+const widget = new Widget();
+const api = new API(widget);
+api.init();

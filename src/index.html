@@ -2,23 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Document</title>
 </head>
 <body>
-  <div class="collapse  elements">
-    <div class="button-collapse">
-      button
+  <div class="widget">
+    
+    <div class="users_list hidden">
+      <h2 class="user_title">Список участников:</h2>
+      <ul></ul>
     </div>
-    <div class="block-collapse">
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
-        been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
-        a galley of type and scrambled it to make a type specimen book. It has survived not only five 
-        centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-      </p>
+
+    <div class="chat hidden">
+      <div class="conversations">
+        <!-- <div class="message">
+          <span>Nickname, time</span>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        </div>
+
+        <div class="message">
+          <span>Nickname, time</span>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        </div>
+        
+        <div class="message you">
+          <span>You, time</span>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        </div>
+
+        <div class="message">
+          <span>Nickname, time</span>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        </div> -->
+
+      </div>
+
+      <form class="form_new_message"action="submit">
+        <input type="text" class="new_message" placeholder="Текст сообщения">
+      </form>
     </div>
+
+    <div class="registration">
+      <form action="submit" class="registration__form">
+        <label for="name">Выберите псевдоним</label>
+        <input id="name" class="registration__input" type="text">
+        <button class="button">Продолжить</button>
+      </form>
+    </div>
+
+    <div class="popover hidden">
+    </div>
+
   </div>
 </body>
 </html>

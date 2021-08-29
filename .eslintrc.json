@@ -19,7 +19,7 @@
         ],
         "quotes": [
             "error",
-            "single"
+            "double"
         ],
         "linebreak-style": "off",
         "import/no-extraneous-dependencies": [
