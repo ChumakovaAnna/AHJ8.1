@@ -55,7 +55,7 @@ export default class API {
     this.ws = new WebSocket(this.url);
     this.ws.binaryType = "blob";
 
-    this.ws.addEventListener("open", (evt) => {
+    this.ws.addEventListener("open", () => {
       console.log("connected people");
     });
 
@@ -70,11 +70,8 @@ export default class API {
           this.widget.renderUsersList(this.response.users, this.user);
         }
         if (this.response.type === "messages") {
-          console.log(this.response.messages);
           this.widget.renderChat(this.response.messages, this.user);
         }
-
-        console.log(this.response);
 
         if (this.response.type === "error") {
           this.widget.renderError(this.response.text);
@@ -85,9 +82,7 @@ export default class API {
     });
 
     this.ws.addEventListener("error", (error) => {
-      const data = JSON.parse(error);
       console.log(JSON.parse(error));
-      return data;
     });
   }
 
