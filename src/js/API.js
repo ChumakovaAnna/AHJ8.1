@@ -1,7 +1,7 @@
 export default class API {
   constructor(widget) {
     // this.url = "ws://localhost:7070";
-    this.url = "wss://ahj8-2.herokuapp.com";
+    this.url = "wss://ahj8-2.herokuapp.com/ws";
     this.widget = widget;
     this.user = null;
     this.response = null;
