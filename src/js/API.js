@@ -1,7 +1,7 @@
 export default class API {
   constructor(widget) {
     // this.url = "ws://localhost:7070";
-    this.url = "wss://git.heroku.com/ahj8-2.git/";
+    this.url = "wss://ahj8-2.herokuapp.com";
     this.widget = widget;
     this.user = null;
     this.response = null;
@@ -64,8 +64,10 @@ export default class API {
     });
 
     this.ws.addEventListener("message", (evt) => {
+      this.response = null;
       if (this.ws.readyState === WebSocket.OPEN) {
         this.response = JSON.parse(evt.data);
+        console.log(this.response);
         if (this.response.type === "users") {
           this.widget.renderUsersList(this.response.users, this.user);
         }
@@ -82,7 +84,7 @@ export default class API {
     });
 
     this.ws.addEventListener("error", (error) => {
-      console.log(JSON.parse(error));
+      console.log(error);
     });
   }
 

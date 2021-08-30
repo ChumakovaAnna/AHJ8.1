@@ -58,7 +58,7 @@ export default class Widget {
       } else {
         messagesList.innerHTML += `
         <div class="message">
-        <span>${user}, ${ele.date}</span>
+        <span>${ele.user}, ${ele.date}</span>
         ${ele.message}
         </div>
         `;
