@@ -12,6 +12,7 @@ export default class Widget {
     this.closeRegistration();
     this.usersList.classList.remove("hidden");
     const ul = this.usersList.querySelector("ul");
+    ul.innerHTML = "";
     users.forEach((ele) => {
       if (ele === name) {
         ul.innerHTML += "<li class=\"valid\">YOU</li>";

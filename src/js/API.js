@@ -67,8 +67,8 @@ export default class API {
       this.response = null;
       if (this.ws.readyState === WebSocket.OPEN) {
         this.response = JSON.parse(evt.data);
-        console.log(this.response);
-        if (this.response.type === "users") {
+        // console.log(this.response);
+        if (this.response.type === "users" && this.user) {
           this.widget.renderUsersList(this.response.users, this.user);
         }
         if (this.response.type === "messages") {
